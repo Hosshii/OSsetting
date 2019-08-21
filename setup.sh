@@ -4,7 +4,7 @@ ROOT=$(pwd)
 ZISAKU="30nichideosjisaku"
 
 #clone
-#git clone https://github.com/tatsumack/30nichideosjisaku.git
+git clone https://github.com/tatsumack/30nichideosjisaku.git
 
 #make dir
 cd $ROOT/$ZISAKU
