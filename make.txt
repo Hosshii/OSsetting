@@ -1,0 +1,6 @@
+DIR_NAME=$(shell pwd | awk -F "/" '{print $$(NF-1)"/"$$NF}')
+ZISAKU="30nichideosjisaku/"
+
+run:
+	rsync -ua  . ../../../$(ZISAKU)/$(DIR_NAME) --exclude Makefile;cd ../../../$(ZISAKU)/$(DIR_NAME);make run
+
