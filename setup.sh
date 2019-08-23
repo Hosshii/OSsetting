@@ -10,7 +10,10 @@ git clone https://github.com/tatsumack/30nichideosjisaku.git
 cd $ROOT/$ZISAKU
 echo -n "making directry..."
 find . -type d -path '*day*'  |xargs -I {} sh -c "cd $ROOT;mkdir -p ./src/{};"
-echo "done."
+if [ $? eq 0 ];then
+    echo "done."
+fi
 
 #copy file
+cd $ROOT
 ./copy.sh convert.sh pull.sh Makefile
