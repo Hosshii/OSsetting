@@ -15,5 +15,5 @@ echo "done."
 #copy file
 cd $ROOT/src
 echo -n "copying files..."
-find . -type d -mindepth 2 -maxdepth 2 |xargs -I {} cp ../Makefile {}/Makefile
+find . -type d -mindepth 2 -maxdepth 2 |xargs -I {} cp ../Makefile {}/Makefile;cp ../copy.sh {}/copy.sh;cp ../pull.sh {}/pull.sh;cp ../convert.sh {}/pull.sh
 echo "done."
