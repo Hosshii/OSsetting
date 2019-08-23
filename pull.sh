@@ -7,7 +7,7 @@ ZISAKU="30nichideosjisaku"
 
 for x in "$@" ;do
     echo -n "copying $x ..."
-    cp ../../../$ZISAKU/$DIR_NAME/$x .
+    cp -i ../../../$ZISAKU/$DIR_NAME/$x .
     echo "done."
     ./convert.sh $x
 done

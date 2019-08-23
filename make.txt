@@ -2,7 +2,7 @@ DIR_NAME=$(shell pwd | awk -F "/" '{print $$(NF-1)"/"$$NF}')
 ZISAKU=30nichideosjisaku
 
 run:
-	rsync -a  . ../../../$(ZISAKU)/$(DIR_NAME) --exclude Makefile;cd ../../../$(ZISAKU)/$(DIR_NAME);make run
+	rsync -av  --exclude 'Makefile' --exclude '*orig' --exclude '*sh' . ../../../$(ZISAKU)/$(DIR_NAME) ;cd ../../../$(ZISAKU)/$(DIR_NAME);make run
 
 convert:
 	./convert.sh
