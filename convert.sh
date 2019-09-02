@@ -8,10 +8,7 @@ fi
 
 echo "converting files..."
 for f in $CONVERT;do
-    mv $f "${f}_orig"
-    touch $f
-    iconv -f SHIFT_JIS -t UTF-8 "${f}_orig" >> $f
-    echo "$f back up to ${f}_orig"
+    iconv -f SHIFT_JIS -t UTF-8 "$f" >> $f
     echo "$f converted to $f"
 done
 

@@ -10,3 +10,6 @@ run: copy
 
 convert:
 	./convert.sh
+
+clean:
+	cd ../../../$(ZISAKU)/$(DIR_NAME);make clean
